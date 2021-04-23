@@ -1,0 +1,6 @@
+2021/04/20-18:04:36.974 5496 Creating DB /home/jio/workspace/whatsauto/User_Data/Default/IndexedDB/https_www.techtudo.com.br_0.indexeddb.leveldb since it was missing.
+2021/04/20-18:04:36.982 5496 Reusing MANIFEST /home/jio/workspace/whatsauto/User_Data/Default/IndexedDB/https_www.techtudo.com.br_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/20-18:04:41.264 55e7 Level-0 table #5: started
+2021/04/20-18:04:41.271 55e7 Level-0 table #5: 348 bytes OK
+2021/04/20-18:04:41.289 55e7 Delete type=0 #3
+2021/04/20-18:04:41.289 55e7 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

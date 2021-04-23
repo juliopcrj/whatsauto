@@ -1,0 +1,6 @@
+2021/04/20-18:02:29.281 5 Reusing MANIFEST /home/jio/workspace/whatsauto/User_Data/Default/Local Storage/leveldb/MANIFEST-000001
+2021/04/20-18:02:29.282 5 Recovering log #4
+2021/04/20-18:02:29.282 5 Reusing old log /home/jio/workspace/whatsauto/User_Data/Default/Local Storage/leveldb/000004.log 
+2021/04/20-18:04:05.332 5 Level-0 table #8: started
+2021/04/20-18:04:05.349 5 Level-0 table #8: 119068 bytes OK
+2021/04/20-18:04:05.354 5 Delete type=0 #4

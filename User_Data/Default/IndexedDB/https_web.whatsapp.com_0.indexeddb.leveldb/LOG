@@ -1,0 +1,12 @@
+2021/04/20-18:02:30.360 5497 Reusing MANIFEST /home/jio/workspace/whatsauto/User_Data/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/20-18:02:30.360 5497 Recovering log #4
+2021/04/20-18:02:30.425 5497 Reusing old log /home/jio/workspace/whatsauto/User_Data/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000004.log 
+2021/04/20-18:02:34.772 5497 Level-0 table #8: started
+2021/04/20-18:02:34.820 5497 Level-0 table #8: 1149733 bytes OK
+2021/04/20-18:02:34.828 5497 Delete type=0 #4
+2021/04/20-18:02:35.374 54b6 Compacting 1@1 + 1@2 files
+2021/04/20-18:02:35.415 54b6 Generated table #9@1: 17560 keys, 696179 bytes
+2021/04/20-18:02:35.415 54b6 Compacted 1@1 + 1@2 files => 696179 bytes
+2021/04/20-18:02:35.421 54b6 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/04/20-18:02:35.421 54b6 Delete type=2 #8
+2021/04/20-18:02:35.421 54b6 Delete type=2 #5
