@@ -18,9 +18,9 @@ import time
     
 
 #[attempt 2]
-def mass_send(contacts, message):
+def mass_send(contacts, message, source):
     options = webdriver.ChromeOptions()
-    options.add_argument("--user-data-dir=./User_Data")
+    options.add_argument("--user-data-dir=./User_Data"+source)
     driver = webdriver.Chrome(chrome_options=options)
 
     for c in contacts:
@@ -29,7 +29,9 @@ def mass_send(contacts, message):
             time.sleep(10)
             button = driver.find_element_by_xpath('//button[@class="_1E0Oz"]')
             button.click()
-            time.sleep(10)
+            with open("day_log.txt", "a+") as f:
+                f.write("Enviado para " + c + "\n")
+            time.sleep(5)
         except:
             print("Error")
 
@@ -42,5 +44,6 @@ if __name__ == "__main__":
         sys.exit(0)
     contacts = open(sys.argv[1]).read()[:-1].split("\n")
     message = open(sys.argv[2]).read()[:-1]
+    #source = sys.argv[3]
 
-    mass_send(contacts, message)
+    mass_send(contacts, message,"")
