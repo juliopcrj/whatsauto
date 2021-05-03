@@ -1,7 +1,6 @@
 import sys
 import selenium.webdriver as wd
-import selenium.webdriver.common.keys as Keys
-from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.keys import Keys
 import time
 
 def mass_send(driver, contacts, message):
@@ -13,11 +12,11 @@ def mass_send(driver, contacts, message):
         search_field.click()
         search_field.send_keys(c)
         time.sleep(2)
-        search_field.send_keys(Keys.Keys().DOWN)
-        search_field.send_keys(Keys.Keys().RETURN)
+        search_field.send_keys(Keys.DOWN)
+        search_field.send_keys(Keys.RETURN)
         box = driver.switch_to.active_element
         box.send_keys(message)
-        box.send_keys(Keys.Keys().RETURN)
+        box.send_keys(Keys.RETURN)
         time.sleep(2)
 
 
