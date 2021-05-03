@@ -1,49 +1,35 @@
 import sys
-from selenium import webdriver
+import selenium.webdriver as wd
+import selenium.webdriver.common.keys as Keys
 from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
 import time
 
-
-#[attempt 1]
-#timeout = 10
-#for c in contacts:
-#    driver.get("https://web.whatsapp.com/send?phone=" + c + "&text="+ message)
-#    element_present = EC.presence_of_element_located((By.CLASS_NAME, 'OTBsx'))
-#    WebDriverWait(driver, timeout).until(element_present)
-#    button = driver.find_element_by_xpath('//button[@class="_1E0Oz"]')
-#    button.click()
-    
-
-#[attempt 2]
-def mass_send(contacts, message, source):
-    options = webdriver.ChromeOptions()
-    options.add_argument("--user-data-dir=./User_Data"+source)
-    driver = webdriver.Chrome(chrome_options=options)
+def mass_send(driver, contacts, message):
+    driver.get("https://web.whatsapp.com")
+    time.sleep(15)
+    search_field = driver.find_element_by_class("_2_1wd")
 
     for c in contacts:
-        driver.get("https://web.whatsapp.com/send?phone=" + c + "&text=" + message)
-        try:
-            time.sleep(10)
-            button = driver.find_element_by_xpath('//button[@class="_1E0Oz"]')
-            button.click()
-            with open("day_log.txt", "a+") as f:
-                f.write("Enviado para " + c + "\n")
-            time.sleep(5)
-        except:
-            print("Error")
-
-    driver.quit()
+        search_field.click()
+        search_field.send_keys(c)
+        time.sleep(2)
+        search_field.send_keys(Keys.Keys().DOWN)
+        search_field.send_keys(Keys.Keys().RETURN)
+        box = driver.switch_to.active_element
+        box.send_keys(message)
+        box.send_keys(Keys.Keys().RETURN)
+        time.sleep(2)
 
 
 if __name__ == "__main__":
     if(len(sys.argv) != 3):
-        print("Forneça os arquivos de contatos e mensagem.\nO uso correto do programa é \npython "+sys.argv[0] + " arquivo_contato arquivo_mensagem")
+        print("Uso correto:\npython "+sys.argv[0] + " arquivo_contato arquivo_mensagem\n")
         sys.exit(0)
-    contacts = open(sys.argv[1]).read()[:-1].split("\n")
-    message = open(sys.argv[2]).read()[:-1]
-    #source = sys.argv[3]
 
-    mass_send(contacts, message,"")
+    options = wd.ChromeOptions()
+    options.add_argument("--user-data-dir=./User_Data")
+    driver = wd.Chrome(options=options)
+    contacts = open(sys.argv[1]).read()[:-1].split("\n")
+    message = open(sys.argv[2]).read()
+    sys.exit(mass_send(driver, contacts, message))
+
