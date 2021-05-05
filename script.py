@@ -18,7 +18,7 @@ def mass_send(driver, contacts, message):
         box.send_keys(message)
         box.send_keys(Keys.RETURN)
         with open("log_day.txt", "a+") as f:
-            f.write("Enviou para " + c)
+            f.write("Enviou para " + c + "\n")
         time.sleep(2)
 
 
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     options = wd.ChromeOptions()
     options.add_argument("--user-data-dir="+ os.path.join(".","User_Data"))
     driver = wd.Chrome(options=options)
-    contacts = open(sys.argv[1]).read()[:-1].split("\n")
-    message = open(sys.argv[2]).read()
+    contacts = open(sys.argv[1]).read().split("\n")
+    message = open(sys.argv[2], encoding="utf-8").read()
     sys.exit(mass_send(driver, contacts, message))
 
