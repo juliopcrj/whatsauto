@@ -3,7 +3,7 @@
 Este repositório contém código para automatização de envios de mensagens pelo whatsapp.
 É necessário ter os contatos salvos no dispositivo.
 
-# pré-requisitos
+## pré-requisitos
 
 python3
 
@@ -11,7 +11,7 @@ selenium
 
 chrome driver
 
-# uso
+## uso
 
 ```bash
 python script.py contatos mensagem
