@@ -1,4 +1,5 @@
 User_Data/
 *.csv
 day_log.txt
+log_day.txt
 error.txt
