@@ -6,7 +6,7 @@ import time
 def mass_send(driver, contacts, message):
     driver.get("https://web.whatsapp.com")
     time.sleep(25)
-    search_field = driver.find_element_by_class("_2_1wd")
+    search_field = driver.find_element_by_class_name("_2_1wd")
 
     for c in contacts:
         search_field.click()
