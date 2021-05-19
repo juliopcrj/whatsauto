@@ -1,5 +1,4 @@
 User_Data/
+__pycache__/
 *.csv
-day_log.txt
-log_day.txt
-error.txt
+*.txt
