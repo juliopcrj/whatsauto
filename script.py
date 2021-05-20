@@ -2,6 +2,7 @@ import sys, os
 import selenium.webdriver as wd
 from selenium.webdriver.common.keys import Keys
 import time
+from selenium.common.exceptions import WebDriverException
 
 def mass_send(driver, contacts, message):
     driver.get("https://web.whatsapp.com")
@@ -18,12 +19,16 @@ def mass_send(driver, contacts, message):
             search_field.send_keys(Keys.DOWN)
             search_field.send_keys(Keys.RETURN)
             box = driver.switch_to.active_element
-            box.send_keys(message)
+            for character in message:
+                if character == "\n" or character == "\0":
+                    box.send_keys(Keys.SHIFT, Keys.RETURN)
+                else:
+                    box.send_keys(character)
             box.send_keys(Keys.RETURN)
             with open("log_day.txt", "a+") as f:
                 f.write("Enviou para " + c + "\n")
             time.sleep(2)
-        except Exception:
+        except WebDriverException:
             with open("log_error.txt", "a+") as f:
                 f.write("Erro enviando para " + c +"\n")
             time.sleep(2)
