@@ -29,13 +29,15 @@ Dê duplo-clique no arquivo script.py, leia o código QR do whatsapp web com o d
 salvos, e o programa enviará a mensagem contida no mensagem.txt a todos os contatos possíveis de contatos.txt
 
 
+### Linux e Mac
+
 ```bash
 python script.py contatos mensagem
 ```
+O executável chromedriver deve estar configurado no PATH.
 
 O arquivo contatos deve possuir um nome de contato por linha, ou no mínimo parte do nome do contato,
 que seja suficiente para identificar unicamente o contato.
-
 
 O arquivo mensagem deve conter a mensagem a ser enviada aos contatos, que será a mesma para todos.
 Ambos os arquivos devem ser salvos com codificação UTF-8.
