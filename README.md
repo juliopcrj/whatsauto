@@ -13,7 +13,7 @@ chrome driver
 
 ## uso
 
-##Windows
+### Windows
 
 Coloque o executável chromedriver.exe na pasta raiz do repositório, ou seja, junto do arquivo script.py
 
