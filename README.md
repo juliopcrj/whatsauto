@@ -23,7 +23,7 @@ O arquivo contatos.txt deve ter um nome de contato por linha, exatamente como es
 dispositivo.
 
 O arquivo mensagem.txt deve conter a mensagem como seria escrita no whatsapp. O programa insere os caracteres de
-formatação, então caso queira colocar algo em negrito, escreva *assim*, caso queiram em itálico, _assim_
+formatação, então caso queira colocar algo em negrito, escreva \*assim\*, caso queiram em itálico, \_assim\_
 
 Dê duplo-clique no arquivo script.py, leia o código QR do whatsapp web com o dispositivo no qual os contatos estão
 salvos, e o programa enviará a mensagem contida no mensagem.txt a todos os contatos possíveis de contatos.txt
