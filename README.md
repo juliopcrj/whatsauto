@@ -20,7 +20,7 @@ e pressione enter. O gerenciador de pacotes do Python vai fazer a instalação d
 
 ## Chrome Driver
 O whatsauto funciona com o navegador Google Chrome. Se você não possui esse navegador instalado, clique [aqui](https://www.google.com/chrome/) para acessar a página de download do mesmo.
-Com o navegador aberto, navegue até a página chrome://version (ou clique [aqui](chrome://version)), e procure a versão, na primeira linha.
+Com o navegador aberto, navegue até a página chrome://version, e procure a versão, na primeira linha.
 A versão é o número que aparece logo após "Google Chrome:".
 [Nessa página](https://chromedriver.chromium.org/downloads) você pode encontrar links para as versões mais recentes do Chrome Driver.
 Selecione a versão correspondente à versão do seu navegador, e faça o download do arquivo chromedriver\_win32.zip .
