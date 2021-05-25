@@ -1,45 +1,45 @@
-# whatsauto
+# WhatsAuto
 
-Este repositório contém código para automatização de envios de mensagens pelo whatsapp.
-É necessário ter os contatos salvos no dispositivo.
+WhatsAuto é um script para automatizar o envio de mensagens através da plataforma web do WhatsApp.
+Para utilizar, é necessário instalar alguns pré-requisitos no seu computador.
+As instruções a seguir são para instalar os pré-requisitos em sistemas Windows.
 
-## pré-requisitos
+## Python3
+Para instalar o python3, você pode fazer o download do instalador [aqui](https://www.python.org/ftp/python/3.9.5/python-3.9.5-amd64.exe)
+Abra o instalador, marque a caixa de "Adicionar Python3 ao PATH", e prossiga normalmente com a instalação.
+Após instalar o python3, é necessário instalar a biblioteca selenium.
 
-python3
+## Selenium
+Para instalar o selenium, você deverá abrir o prompt de comando, ou o PowerShell.
+Isso pode ser feito abrindo o menu iniciar e digitando "PowerShell" (sem aspas).
+Com o powershell(ou cmd) aberto, digite
+```
+pip install selenium
+```
+e pressione enter. O gerenciador de pacotes do Python vai fazer a instalação do pip.
 
-selenium
+## Chrome Driver
+O whatsauto funciona com o navegador Google Chrome. Se você não possui esse navegador instalado, clique [aqui](https://www.google.com/chrome/) para acessar a página de download do mesmo.
+Com o navegador aberto, navegue até a página chrome://version (ou clique [aqui](chrome://version)), e procure a versão, na primeira linha.
+A versão é o número que aparece logo após "Google Chrome:".
+[Nessa página](https://chromedriver.chromium.org/downloads) você pode encontrar links para as versões mais recentes do Chrome Driver.
+Selecione a versão correspondente à versão do seu navegador, e faça o download do arquivo chromedriver\_win32.zip .
+A versão 32bits é compatível com o sistema de 64bits.
+Descompacte o chromedriver, e coloque o executável chromedriver.exe na mesma pasta do script.py .
 
-chrome driver
+O seu dispositivo agora está pronto para utilizar o whatsauto.
 
 ## uso
 
-### Windows
+Na pasta do script.py e chromedriver.exe, crie um arquivo chamado contatos.txt.
+Esse arquivo deve ser preenchido com os nomes dos contatos, exatamente como constam no whatsapp do seu celular, um por linha.
 
-Coloque o executável chromedriver.exe na pasta raiz do repositório, ou seja, junto do arquivo script.py
+Nessa mesma pasta, crie um arquivo camado mensagem.txt. Esse arquivo vai conter a mensagem que será enviada a todos os contatos indicados em contatos.txt.
+A mensagem pode conter caracteres de formatação de texto do whatsapp, como \*negrito\* ou \_itálico\_.
 
-Crie um arquivo contatos.txt e um arquivo mensagem.txt, na mesma pasta.
+Após ter os dois arquivos preparados, dê duplo-clique no arquivo script.py. Uma janela do chrome será aberta, na página do whatsapp web. A partir desse momento, você terá 25 segundos para fazer a leitura do código QR com o mesmo celular onde os contatos estão salvos.
+Se a leitura for feita dentro do tempo, aguarde, e o programa começará a enviar as mensagens.
 
-O arquivo contatos.txt deve ter um nome de contato por linha, exatamente como está salvo na lista de contatos do
-dispositivo.
-
-O arquivo mensagem.txt deve conter a mensagem como seria escrita no whatsapp. O programa insere os caracteres de
-formatação, então caso queira colocar algo em negrito, escreva \*assim\*, caso queiram em itálico, \_assim\_
-
-Dê duplo-clique no arquivo script.py, leia o código QR do whatsapp web com o dispositivo no qual os contatos estão
-salvos, e o programa enviará a mensagem contida no mensagem.txt a todos os contatos possíveis de contatos.txt
-
-
-### Linux e Mac
-
-```bash
-python script.py contatos mensagem
-```
-O executável chromedriver deve estar configurado no PATH.
-
-O arquivo contatos deve possuir um nome de contato por linha, ou no mínimo parte do nome do contato,
-que seja suficiente para identificar unicamente o contato.
-
-O arquivo mensagem deve conter a mensagem a ser enviada aos contatos, que será a mesma para todos.
-Ambos os arquivos devem ser salvos com codificação UTF-8.
-
+### IMPORTANTE
+O whatsauto utiliza o whatsapp web para fazer o envio das mensagens, então não é possível ter os contatos salvos em um celular e enviar com outro. O celular com os contatos salvos deverá ser usado para isso.
 
