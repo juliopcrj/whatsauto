@@ -23,7 +23,7 @@ def mass_send(driver, contacts, message):
                 search_field.send_keys(Keys.DOWN) #envia a tecla DOWN para selecionar o primeiro contato encontrado na lista 
                 _temp = driver.switch_to.active_element #_temp é o elemento de item na lista de contato
 
-                if c not in _temp.text[:len(c)] or _temp == search_field:
+                if c.lower() not in _temp.text[:len(c)].lower() or _temp == search_field:
                     raise Exception #contato não está salvo no dispositivo ou não possui whatsapp
 
                 search_field.send_keys(Keys.RETURN) #caso o contato esteja na lista e não gerou exceção, aperta enter para escolher o contato
