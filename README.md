@@ -40,6 +40,11 @@ A mensagem pode conter caracteres de formatação de texto do whatsapp, como \*n
 Após ter os dois arquivos preparados, dê duplo-clique no arquivo script.py. Uma janela do chrome será aberta, na página do whatsapp web. A partir desse momento, você terá 25 segundos para fazer a leitura do código QR com o mesmo celular onde os contatos estão salvos.
 Se a leitura for feita dentro do tempo, aguarde, e o programa começará a enviar as mensagens.
 
+## Logs
+
+Durante a execução, o programa salva registros de envios de mensagens no arquivo log\_day.txt, e registros de erros de envio em log\_error.txt
+Ambos os arquivos possuem timestamp em todos os registros.
+
 ### IMPORTANTE
 O whatsauto utiliza o whatsapp web para fazer o envio das mensagens, então não é possível ter os contatos salvos em um celular e enviar com outro. O celular com os contatos salvos deverá ser usado para isso.
 
