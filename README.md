@@ -42,7 +42,7 @@ Se a leitura for feita dentro do tempo, aguarde, e o programa começará a envia
 
 ## Logs
 
-Durante a execução, o programa salva registros de envios de mensagens no arquivo log\_day.txt, e registros de erros de envio em log\_error.txt
+Durante a execução, o programa salva registros de envios de mensagens no arquivo log\_sent.txt, e registros de erros de envio em log\_error.txt
 Ambos os arquivos possuem timestamp em todos os registros.
 
 ### IMPORTANTE
