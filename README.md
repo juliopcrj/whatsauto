@@ -4,7 +4,9 @@ WhatsAuto é um script para automatizar o envio de mensagens através da platafo
 Para utilizar, é necessário instalar alguns pré-requisitos no seu computador.
 As instruções a seguir são para instalar os pré-requisitos em sistemas Windows.
 
-![Demonstração](whatsauto_cropped.gif)
+<p align="center">
+  <img src="whatsauto_cropped.gif" alt="Demonstração" />
+</p>
 
 ## Python3
 Para instalar o python3, você pode fazer o download do instalador [aqui](https://www.python.org/ftp/python/3.9.5/python-3.9.5-amd64.exe)
