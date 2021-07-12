@@ -10,7 +10,7 @@ def mass_send(driver, contacts, message):
     driver.get("https://web.whatsapp.com")
     time.sleep(25) #tempo para parear o telefone com o whatsapp web
     try:
-        search_field = driver.find_element_by_class_name("_2_1wd") #o campo de pesquisa de contato
+        search_field = driver.find_element_by_class_name("_13NKt") #o campo de pesquisa de contato
         message = message.split("\n")
 
         for c in contacts:
