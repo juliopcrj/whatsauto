@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import sys, os
 import platform
 import selenium.webdriver as wd
