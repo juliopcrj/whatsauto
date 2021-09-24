@@ -9,8 +9,11 @@ def main():
         copyfile(abspath("contatos.txt"), abspath("." + sep + "backup.txt") )
 
     all_contacts = open("backup.txt").read()[:-1].split("\n")
-    ans_contacts = open("responderam.txt").read()[:-1].split("\n")
-
+    try:
+        ans_contacts = open("responderam.txt").read()[:-1].split("\n")
+    except FileNotFoundError:
+        print("Arquivo 'responderam.txt' faltando, por favor coloque-o nesta pasta e tente novamente")
+        exit(1)
 
     #codigo,contato
     contacts_dict = [i.split(",") for i in open("dicionario.csv").read()[:-1].split("\n")]
