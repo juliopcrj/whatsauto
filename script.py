@@ -39,7 +39,7 @@ def mass_send(driver, contacts, message):
                 box.send_keys(Keys.RETURN) #aperta enter para enviar a mensagem
                 with open("log_sent.txt", "a+") as f:
                     f.write(datetime.now().strftime("%Y/%m/%d-%H:%M:%S") + " - Enviou para " + c + "\n") #salva em um log para saber para quais contatos a mensagem foi enviada
-                time.sleep(1) #aguarda enviar a mensagem
+                time.sleep(3) #aguarda enviar a mensagem
             except (WebDriverException, Exception):
                 with open("log_error.txt", "a+") as f:
                     f.write(datetime.now().strftime("%Y/%m/%d-%H:%M:%S") + " - Erro enviando para " + c +"\n") #caso tenha acontecido erro, salva quais contatos não receberam
