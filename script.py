@@ -46,7 +46,7 @@ def mass_send(driver, contacts, message):
                 time.sleep(1)
     except NoSuchElementException: #não leu o QR code a tempo, ou não carregou o whatsapp web a tempo
         print("WhatsApp web não carregou no tempo determinado, tente novamente")
-        driver.close()
+    driver.close()
 
 
 if __name__ == "__main__":
