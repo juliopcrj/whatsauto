@@ -13,14 +13,14 @@ Para instalar o python3, você pode fazer o download do instalador [aqui](https:
 Abra o instalador, marque a caixa de "Adicionar Python3 ao PATH", e prossiga normalmente com a instalação.
 Após instalar o python3, é necessário instalar a biblioteca selenium.
 
-## Selenium
-Para instalar o selenium, você deverá abrir o prompt de comando, ou o PowerShell.
+## Requisitos
+Para instalar os requisitos, você deverá abrir o prompt de comando, ou o PowerShell.
 Isso pode ser feito abrindo o menu iniciar e digitando "PowerShell" (sem aspas).
 Com o powershell(ou cmd) aberto, digite
 ```
-pip install selenium
+pip install -r requirements.txt
 ```
-e pressione enter. O gerenciador de pacotes do Python vai fazer a instalação do pip.
+e pressione enter. O gerenciador de pacotes do Python vai fazer a instalação dos requisitos.
 
 ## Chrome Driver
 O whatsauto funciona com o navegador Google Chrome. Se você não possui esse navegador instalado, clique [aqui](https://www.google.com/chrome/) para acessar a página de download do mesmo.
